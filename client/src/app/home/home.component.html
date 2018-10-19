@@ -1,0 +1,13 @@
+<a href="/authors/new">Add a quotable Author</a>
+
+<p>We have quotes by:</p>
+<table>
+  <thead>
+    <th>Author</th>
+    <th>Actions Available</th>
+  </thead>
+  <tr *ngFor="let author of allAuthors">
+    <td>{{author.name}}</td>
+    <td><a href="/authors/{{author._id}}"><button>Show Quotes</button></a> <a href="/authors/{{author._id}}/edit"><button>Edit</button></a></td>
+  </tr>
+</table>

@@ -1,0 +1,7 @@
+<a href="/">Home</a>
+<p>{{author|json}}</p>
+<p>Add a new author</p>
+<p>Name:</p>
+<p *ngIf="error.length > 0">{{error}}</p>
+<input type="text" [(ngModel)]="author.name" name="author.name">
+<p><button>Cancel</button> <button (click)="createAuthor()">Submit</button></p>

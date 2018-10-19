@@ -1,0 +1,5 @@
+<div *ngIf="author">
+  <p>Edit {{author.name}}</p>
+  <input type="text" [(ngModel)]="author.name" name="author.name" >
+  <p><button>Cancel</button> <button (click)="updateAuthor()">Create</button></p>
+</div>

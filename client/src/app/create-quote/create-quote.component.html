@@ -1,0 +1,8 @@
+<div *ngIf="author">
+  <a href="/authors/{{author_id}}">Back</a>
+  <p>Create a quote for {{author.name}}</p>
+  <p>Quote:</p>
+  <p *ngIf="error">{{error}}</p>
+  <input type="text" [(ngModel)]="quote.quote" name="quote.quote">
+  <p><button>Cancel</button> <button (click)="createQuote()">Submit</button></p>
+</div>

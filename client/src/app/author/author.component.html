@@ -1,0 +1,17 @@
+<a href="/">home</a>
+<div *ngIf="author">
+  <a href="/quotes/{{author._id}}">Add a quote</a>
+  <p>Quotes by {{author.name}}</p>
+  <table>
+    <thead>
+      <th>Quote</th>
+      <th>Votes</th>
+      <th>Actions Available</th>
+    </thead>
+    <tr *ngFor="let quote of author.quotes">
+      <td>{{quote.quote}}</td>
+      <td>{{quote.votes}}</td>
+      <td><Button (click)="castVote(1, quote._id)">Vote Up</Button> <button (click)="castVote(-1, quote._id)">Vote Down</button> <button (click)="deleteQuote(quote._id)">Delete</button></td>
+    </tr>
+  </table>
+</div>
